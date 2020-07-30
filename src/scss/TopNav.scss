@@ -1,0 +1,14 @@
+@import "./Variable.scss";
+
+.top-nav {
+  padding: 2em 0;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  a:not(:nth-child(1)) {
+    padding: 0 1em;
+  }
+}

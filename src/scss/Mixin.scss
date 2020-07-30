@@ -1,0 +1,9 @@
+@mixin p {
+  line-height: 1em;
+}
+
+@mixin flex-center-space-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

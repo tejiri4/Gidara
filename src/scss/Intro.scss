@@ -1,0 +1,35 @@
+@import "./Variable.scss";
+@import "./Mixin.scss";
+
+.intro {
+  display: flex;
+  background: $midnight-express;
+  min-height: 100vh;
+  color: $white;
+  align-items: center;
+  flex-direction: column;
+
+  .nav-button {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  > div:nth-child(1) {
+    @include flex-center-space-evenly;
+  }
+
+  > div:nth-child(2) {
+    @include flex-center-space-evenly;
+    flex-grow: 1;
+  }
+
+  > div {
+    text-align: justify;
+
+    width: 100%;
+
+    > div {
+      width: 40%;
+    }
+  }
+}

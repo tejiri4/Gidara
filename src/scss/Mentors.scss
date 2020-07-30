@@ -1,0 +1,29 @@
+@import "./Variable.scss";
+
+.mentors {
+  background: $midnight-express;
+  color: $white;
+  overflow: hidden;
+  max-width: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .mentor:nth-child(1) {
+      margin-left: -20%;
+      opacity: 0.5;
+    }
+
+    .mentor:nth-child(2) {
+      padding: 0 5%;
+    }
+
+    .mentor:nth-child(3) {
+      margin-right: -20%;
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "./Variable.scss";
+
+.group-vertical-card {
+  background: $custom-white;
+  display: flex;
+  padding: 2em 0;
+
+  &__title {
+    p {
+      writing-mode: vertical-lr;
+      transform: rotate(-360);
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+    border-top: 0.15em solid $nobel;
+    padding-top: 2em;
+    margin-right: 3em;
+
+    > div {
+      text-align: justify;
+      justify-content: space-between;
+
+      p {
+        margin-top: 0;
+      }
+
+      h2 {
+        width: 70%;
+      }
+    }
+
+    &__vertical-cards {
+      display: flex;
+    }
+
+    &__nav-buttons {
+      display: flex;
+      margin-bottom: 2em;
+
+      .nav-button {
+        background: $black;
+        border: none;
+      }
+
+      .nav-button:nth-child(1) {
+          margin-right: 1em;
+      }
+    }
+  }
+}

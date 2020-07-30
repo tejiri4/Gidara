@@ -1,0 +1,18 @@
+.mentor {
+  width: 50%;
+
+  &__content {
+    &__nav-buttons {
+      display: flex;
+      margin: 1em 0;
+
+      .nav-button:nth-child(1) {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  p {
+    text-align: justify;
+  }
+}
