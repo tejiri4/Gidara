@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // components
 import VerticalCard from "../VerticalCard";
@@ -12,7 +13,13 @@ import { NavButton, PrimaryButton } from "../Button";
 import Arrow from "../SVGs/Arrow";
 import LongArrow from "../SVGs/LongArrow";
 
-const GroupVerticalCard = ({ title, subTitle, description, buttonName, hideButton }) => {
+const GroupVerticalCard = ({
+  title,
+  subTitle,
+  description,
+  buttonName,
+  hideButton,
+}) => {
   return (
     <div className="group-vertical-card">
       <div className="group-vertical-card__title">
@@ -69,6 +76,14 @@ const GroupVerticalCard = ({ title, subTitle, description, buttonName, hideButto
       </div>
     </div>
   );
+};
+
+GroupVerticalCard.propTypes = {
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+  description: PropTypes.string,
+  buttonName: PropTypes.string,
+  hideButton: PropTypes.bool,
 };
 
 export default GroupVerticalCard;

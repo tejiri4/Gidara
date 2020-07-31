@@ -12,8 +12,8 @@ import Instalgram from "../SVGs/Instalgram";
 const Footer = () => {
   return (
     <div className="footer">
-      <div div className="footer__content-one">
-        <div div className="footer__content-one__lists">
+      <div  className="footer__content-one">
+        <div  className="footer__content-one__lists">
           <ul>
             <li>
               <h4>Store</h4>
@@ -44,7 +44,7 @@ const Footer = () => {
           <p>Your music career success partner</p>
         </div>
       </div>
-      <div div className="footer__content-two">
+      <div className="footer__content-two">
         <p>
           <Copyright />
           <span>2018. All rights reserved</span>

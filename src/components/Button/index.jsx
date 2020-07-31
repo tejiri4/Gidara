@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // styles
 import "../../scss/Button.scss";
@@ -17,3 +18,22 @@ export const PrimaryButton = ({ name, onClick, children }) => (
     </button>
   </div>
 );
+
+NavButton.propTypes = {
+  onClick: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+
+PrimaryButton.protoTypes = {
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+}
+

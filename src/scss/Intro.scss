@@ -8,6 +8,14 @@
   color: $white;
   align-items: center;
   flex-direction: column;
+  position: relative;
+
+  .image {
+    position: absolute;
+    bottom: 0;
+    margin-right: 5%;
+    height: 80%;
+  }
 
   .nav-button {
     position: absolute;
@@ -21,6 +29,7 @@
   > div:nth-child(2) {
     @include flex-center-space-evenly;
     flex-grow: 1;
+    flex-wrap: wrap;
   }
 
   > div {
@@ -30,6 +39,17 @@
 
     > div {
       width: 40%;
+      min-width: 300px;
+    }
+  }
+
+  @include lg {
+    .image {
+      position: relative;
+    }
+
+    .nav-button {
+      display: none;
     }
   }
 }

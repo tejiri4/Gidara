@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // styles
 import "../../scss/Mentor.scss";
@@ -6,7 +7,15 @@ import Image from "../Image";
 import { NavButton } from "../Button";
 import Arrow from "../SVGs/Arrow";
 
-export const Mentor = ({ src, title, description, showNavButtons, handleRightClick, handleLeftClick, id }) => {
+export const Mentor = ({
+  src,
+  title,
+  description,
+  showNavButtons,
+  handleRightClick,
+  handleLeftClick,
+  id,
+}) => {
   return (
     <div className="mentor">
       <Image src={src} alt="mentor" />
@@ -26,4 +35,14 @@ export const Mentor = ({ src, title, description, showNavButtons, handleRightCli
       </div>
     </div>
   );
+};
+
+Mentor.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  showNavButtons: PropTypes.bool,
+  handleRightClick: PropTypes.func,
+  handleLeftClick: PropTypes.func,
+  id: PropTypes.number,
 };

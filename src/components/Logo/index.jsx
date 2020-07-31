@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // styles
 import "../../scss/Logo.scss";
@@ -27,6 +28,10 @@ const Logo = ({ color }) => {
       <h3 style={{ color }}>Gidara</h3>
     </div>
   );
+};
+
+Logo.propTypes = {
+  color: PropTypes.string,
 };
 
 export default Logo;

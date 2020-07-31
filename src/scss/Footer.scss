@@ -1,4 +1,5 @@
 @import "./Variable.scss";
+@import "./Mixin.scss";
 
 .footer {
   background: $midnight-express;
@@ -9,6 +10,7 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 4em 0;
 
     > div:nth-child(2) {
@@ -45,6 +47,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     > div {
       svg {
@@ -54,7 +57,7 @@
       }
     }
   }
-  
+
   p {
     display: flex;
     align-items: center;
@@ -63,6 +66,16 @@
       margin-right: 0.5em;
       width: 1em;
       height: 1em;
+    }
+  }
+
+  @include sm {
+    padding: 2em 1em;
+    
+    &__content-one {
+      > div:nth-child(2) {
+        margin-right: 0;
+      }
     }
   }
 }
