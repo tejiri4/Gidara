@@ -11,13 +11,13 @@ import Hero from "../../assets/Hero image.png";
 import TopNav from "../TopNav";
 import Logo from "../Logo";
 import { NavButton } from "../Button";
-import Arrow from "../Arrow/index";
+import Arrow from "../SVGs/Arrow";
 
 const Intro = () => {
   return (
     <div className="intro">
       <div>
-        <Logo />
+        <Logo color="#159B69" />
         <TopNav />
       </div>
       <div>

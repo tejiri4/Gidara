@@ -11,7 +11,7 @@ const Arrow = ({ arrowColor, translatePosition }) => {
       y="0px"
       viewBox="0 0 31.49 31.49"
       style={{
-        "enable-background": "new 0 0 31.49 31.49;",
+        "enableBackground": "new 0 0 31.49 31.49",
         transform: `rotate(${translatePosition || 90}deg)`,
       }}
       space="preserve"

@@ -1,0 +1,68 @@
+@import "./Variable.scss";
+
+.footer {
+  background: $midnight-express;
+  padding: 2em 4em;
+  color: $white;
+
+  &__content-one {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 4em 0;
+
+    > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin-right: 15em;
+
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0.5em 0;
+      }
+    }
+
+    &__lists {
+      display: flex;
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style: none;
+          padding: 0.5em 0;
+          padding-right: 4em;
+        }
+      }
+    }
+  }
+
+  &__content-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      svg {
+        height: 1.3em;
+        width: 1.3em;
+        margin-left: 1.5em;
+      }
+    }
+  }
+  
+  p {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 0.5em;
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

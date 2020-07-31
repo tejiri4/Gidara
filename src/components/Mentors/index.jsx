@@ -12,8 +12,9 @@ import Mentor2 from "../../assets/Mentors section image 2 - Timbaland.png";
 import Mentor3 from "../../assets/Mentors section image 3 - Chance the rapper.png";
 
 const Mentors = () => {
-  const [mentors] = useState([
+  const [mentors, setMentors] = useState([
     {
+      id: 1,
       title: "Michael Santiago Render",
       image: Mentor1,
       description: `Michael Santiago Render, better known by his stage name Killer Mike,
@@ -22,6 +23,7 @@ const Mentors = () => {
             Fontana Distribution.`,
     },
     {
+      id: 2,
       title: "Timbaland Chance the Rapp",
       image: Mentor2,
       description: `Timothy Zachary Mosley, known professionally as Timbaland, is an
@@ -30,6 +32,7 @@ const Mentors = () => {
           Ginuwine...the Bachelor for R&B singer Ginuwine.`,
     },
     {
+      id: 3,
       title: "Chancelor Jonathan Bennett",
       image: Mentor3,
       description: `
@@ -41,12 +44,51 @@ const Mentors = () => {
     },
   ]);
 
+
+  const navigate = (type) => {
+    const mentorsLength = mentors.length;
+    const newMentorArray = [];
+
+    if(type === 'right') {
+      mentors.forEach((mentor, index) => {
+        if(index !== mentorsLength - 1) {
+          newMentorArray.push(mentor)
+        }
+
+        if(index === mentorsLength- 1) {
+           newMentorArray.unshift(mentor)
+        }
+      })
+    }
+
+    if(type === 'left') {
+      mentors.forEach((mentor, index) => {
+        if(index !== 0) {
+          newMentorArray.push(mentor)
+        }
+
+        if(index === mentorsLength- 1) {
+           newMentorArray.push(mentors[0])
+        }
+      })
+    }
+
+    setMentors(newMentorArray)
+  }
+
+  const handleLeftClick  = (id) => () => navigate('left')
+  const handleRightClick = (id) => ()=> navigate('right')
+
   return (
     <div className="mentors">
       <h1>Our Mentors</h1>
       <div>
-        {mentors.map(({ title, image, description }, index) => (
+        {mentors.map(({ title, image, description, id }, index) => (
           <Mentor
+            id={id}
+            key={id}
+            handleLeftClick={handleLeftClick}
+            handleRightClick={handleRightClick}
             title={title}
             src={image}
             description={description}

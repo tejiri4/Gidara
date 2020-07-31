@@ -7,6 +7,8 @@ import "./App.css";
 import Intro from "./components/Intro";
 import GroupVerticalCard from "./components/GroupVerticalCard";
 import Mentors from "./components/Mentors";
+import Update from "./components/Update";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,19 +23,18 @@ function App() {
       />
       <Mentors />
       <GroupVerticalCard
-        title="What we do"
-        subTitle="You’re in great company"
-        description="
-          Gidara seeks to connect young talented musicians with world class
-          producers, managers etc"
+        title="Resources"
+        subTitle="Resources for student artist"
+        buttonName="VIEW ALL RESOURCES"
+        hideButton
       />
       <GroupVerticalCard
-        title="What we do"
-        subTitle="You’re in great company"
-        description="
-          Gidara seeks to connect young talented musicians with world class
-          producers, managers etc"
+        subTitle="Resources for student artist"
+        buttonName="VIEW ALL RESOURCES"
+        hideButton
       />
+      <Update />
+      <Footer />
     </div>
   );
 }

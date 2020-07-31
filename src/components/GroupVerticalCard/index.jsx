@@ -8,10 +8,11 @@ import "../../scss/GroupVerticalCard.scss";
 
 // images
 import Artist from "../../assets/What we do section image 2.png";
-import { NavButton } from "../Button";
-import Arrow from "../Arrow";
+import { NavButton, PrimaryButton } from "../Button";
+import Arrow from "../SVGs/Arrow";
+import LongArrow from "../SVGs/LongArrow";
 
-const GroupVerticalCard = ({ title, subTitle, description }) => {
+const GroupVerticalCard = ({ title, subTitle, description, buttonName, hideButton }) => {
   return (
     <div className="group-vertical-card">
       <div className="group-vertical-card__title">
@@ -21,14 +22,16 @@ const GroupVerticalCard = ({ title, subTitle, description }) => {
         <div>
           {subTitle && <p>{subTitle}</p>}
           {description && <h2>{description}</h2>}
-          <div className="group-vertical-card__content__nav-buttons">
-            <NavButton>
-              <Arrow translatePosition="0" arrowColor="#FFF" />
-            </NavButton>
-            <NavButton>
-              <Arrow translatePosition="180" arrowColor="#FFF" />
-            </NavButton>
-          </div>
+          {!hideButton && (
+            <div className="group-vertical-card__content__nav-buttons">
+              <NavButton>
+                <Arrow translatePosition="0" arrowColor="#FFF" />
+              </NavButton>
+              <NavButton>
+                <Arrow translatePosition="180" arrowColor="#FFF" />
+              </NavButton>
+            </div>
+          )}
         </div>
         <div className="group-vertical-card__content__vertical-cards">
           <VerticalCard
@@ -55,6 +58,13 @@ const GroupVerticalCard = ({ title, subTitle, description }) => {
             promotional fees."
             src={Artist}
           />
+        </div>
+        <div>
+          {buttonName && (
+            <PrimaryButton name={buttonName}>
+              <LongArrow />
+            </PrimaryButton>
+          )}
         </div>
       </div>
     </div>
