@@ -1,8 +1,5 @@
 import React from "react";
 
-// styles
-import "./App.css";
-
 // components
 import Intro from "./components/Intro";
 import GroupVerticalCard from "./components/GroupVerticalCard";
