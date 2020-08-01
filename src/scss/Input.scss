@@ -7,5 +7,15 @@
     padding: 1em;
     border-radius: 0.5em;
     width: 100%;
+    font-weight: 700;
+    color: $black;
+  }
+
+  input:focus {
+    outline-color: $white;
+  }
+
+  input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $black;
   }
 }

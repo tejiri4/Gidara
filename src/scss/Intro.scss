@@ -10,6 +10,18 @@
   flex-direction: column;
   position: relative;
 
+  &__content {
+    &__description {
+      p:nth-child(1) {
+         font-weight: 700;
+      }
+
+      p:nth-child(2) {
+        font-weight: 400;
+      }
+    }
+  }
+
   .image {
     position: absolute;
     bottom: 0;

@@ -9,8 +9,7 @@ import Facebook from "../SVGs/Facebook";
 import Google from "../SVGs/Google";
 import Instalgram from "../SVGs/Instalgram";
 
-const Footer = () => {
-  return (
+const Footer = () => (
     <div className="footer">
       <div  className="footer__content-one">
         <div  className="footer__content-one__lists">
@@ -57,7 +56,6 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
+);
 
 export default Footer;

@@ -1,11 +1,18 @@
+@import "./Variable.scss";
+
 .mentor {
   width: 50%;
   min-width: 300px;
+  padding: 3em 0;
 
   &__content {
+    h1 {
+      color: $green;
+      margin: 0;
+    }
     &__nav-buttons {
       display: flex;
-      margin: 1em 0;
+      margin: 1.5em 0;
 
       .nav-button:nth-child(1) {
         margin-right: 1em;

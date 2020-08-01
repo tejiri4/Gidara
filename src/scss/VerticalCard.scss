@@ -1,4 +1,8 @@
 .vertical-card {
   width: 30%;
   min-width: 300px;
+
+  div:nth-child(2) {
+    padding: 0 1em;
+  }
 }

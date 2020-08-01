@@ -8,10 +8,17 @@ import VerticalCard from "../VerticalCard";
 import "../../scss/GroupVerticalCard.scss";
 
 // images
-import Artist from "../../assets/What we do section image 2.png";
+import ArtistOne from "../../assets/What we do section image 1.png";
+import ArtistTwo from "../../assets/What we do section image 2.png";
+import ArtistThree from "../../assets/What we do section image 3.png";
+
+// components
 import { NavButton, PrimaryButton } from "../Button";
 import Arrow from "../SVGs/Arrow";
 import LongArrow from "../SVGs/LongArrow";
+
+// custom hooks
+import Navigate from "../../customHook/Navigate";
 
 const GroupVerticalCard = ({
   title,
@@ -20,6 +27,36 @@ const GroupVerticalCard = ({
   buttonName,
   hideButton,
 }) => {
+  const { contents, handleNavigation } = Navigate([
+    {
+      id: 1,
+      title: "One",
+      description: `Place any text you want here etc.
+      We invest between N2m - N5m in
+      marketing, production and
+      promotional fees.`,
+      src: ArtistOne,
+    },
+    {
+      id: 2,
+      title: "Two",
+      description: `Place any text you want here etc.
+      We invest between N2m - N5m in
+      marketing, production and
+      promotional fees.`,
+      src: ArtistTwo,
+    },
+    {
+      id: 3,
+      title: "Three",
+      description: `Place any text you want here etc.
+      We invest between N2m - N5m in
+      marketing, production and
+      promotional fees.`,
+      src: ArtistThree,
+    },
+  ]);
+
   return (
     <div className="group-vertical-card">
       <div className="group-vertical-card__title">
@@ -31,40 +68,20 @@ const GroupVerticalCard = ({
           {description && <h2>{description}</h2>}
           {!hideButton && (
             <div className="group-vertical-card__content__nav-buttons">
-              <NavButton>
+              <NavButton onClick={() => handleNavigation("right")}>
                 <Arrow translatePosition="0" arrowColor="#FFF" />
               </NavButton>
-              <NavButton>
+              <NavButton onClick={() => handleNavigation("left")}>
                 <Arrow translatePosition="180" arrowColor="#FFF" />
               </NavButton>
             </div>
           )}
         </div>
         <div className="group-vertical-card__content__vertical-cards">
-          <VerticalCard
-            title="One"
-            description="Place any text you want here etc.
-            We invest between N2m - N5m in
-            marketing, production and
-            promotional fees."
-            src={Artist}
-          />
-          <VerticalCard
-            title="One"
-            description="Place any text you want here etc.
-            We invest between N2m - N5m in
-            marketing, production and
-            promotional fees."
-            src={Artist}
-          />
-          <VerticalCard
-            title="One"
-            description="Place any text you want here etc.
-            We invest between N2m - N5m in
-            marketing, production and
-            promotional fees."
-            src={Artist}
-          />
+          {contents &&
+            contents.map(({ title, description, src }) => (
+              <VerticalCard title={title} description={description} src={src} />
+            ))}
         </div>
         <div>
           {buttonName && (

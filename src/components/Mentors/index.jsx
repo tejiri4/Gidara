@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // styles
 import "../../scss/Mentors.scss";
@@ -11,11 +11,14 @@ import Mentor1 from "../../assets/Mentors section image 1 - Killer Mike.png";
 import Mentor2 from "../../assets/Mentors section image 2 - Timbaland.png";
 import Mentor3 from "../../assets/Mentors section image 3 - Chance the rapper.png";
 
+// custom hooks
+import Navigate from "../../customHook/Navigate";
+
 const Mentors = () => {
-  const [mentors, setMentors] = useState([
+  const { contents, handleNavigation } = Navigate([
     {
       id: 1,
-      title: "Michael Santiago Render",
+      title: "Killer Mike",
       image: Mentor1,
       description: `Michael Santiago Render, better known by his stage name Killer Mike,
             is an American rapper, actor, and activist. He is the founder of Grind
@@ -24,7 +27,7 @@ const Mentors = () => {
     },
     {
       id: 2,
-      title: "Timbaland Chance the Rapp",
+      title: "Timbaland",
       image: Mentor2,
       description: `Timothy Zachary Mosley, known professionally as Timbaland, is an
           American record producer, rapper, singer, songwriter, and DJ.
@@ -33,7 +36,7 @@ const Mentors = () => {
     },
     {
       id: 3,
-      title: "Chancelor Jonathan Bennett",
+      title: "Chance the Rapper",
       image: Mentor3,
       description: `
       Chancelor Jonathan Bennett, known professionally as Chance the
@@ -44,46 +47,14 @@ const Mentors = () => {
     },
   ]);
 
-
-  const navigate = (type) => {
-    const mentorsLength = mentors.length;
-    const newMentorArray = [];
-
-    if(type === 'right') {
-      mentors.forEach((mentor, index) => {
-        if(index !== mentorsLength - 1) {
-          newMentorArray.push(mentor)
-        }
-
-        if(index === mentorsLength- 1) {
-           newMentorArray.unshift(mentor)
-        }
-      })
-    }
-
-    if(type === 'left') {
-      mentors.forEach((mentor, index) => {
-        if(index !== 0) {
-          newMentorArray.push(mentor)
-        }
-
-        if(index === mentorsLength- 1) {
-           newMentorArray.push(mentors[0])
-        }
-      })
-    }
-
-    setMentors(newMentorArray)
-  }
-
-  const handleLeftClick  = (id) => () => navigate('left')
-  const handleRightClick = (id) => ()=> navigate('right')
+  const handleLeftClick = (id) => () => handleNavigation("left");
+  const handleRightClick = (id) => () => handleNavigation("right");
 
   return (
     <div className="mentors">
       <h1>Our Mentors</h1>
       <div>
-        {mentors.map(({ title, image, description, id }, index) => (
+        {contents.map(({ title, image, description, id }, index) => (
           <Mentor
             id={id}
             key={id}

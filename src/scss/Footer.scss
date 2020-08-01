@@ -70,8 +70,8 @@
   }
 
   @include sm {
-    padding: 2em 1em;
-    
+    padding: 2em 1.5em;
+
     &__content-one {
       > div:nth-child(2) {
         margin-right: 0;
