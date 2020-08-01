@@ -7,7 +7,9 @@ import "../../scss/Intro.scss";
 import Image from "../Image";
 
 // assets
-import Hero from "../../assets/Hero image.png";
+import Hero from "../../assets/HeroImage.png";
+
+// components
 import TopNav from "../TopNav";
 import Logo from "../Logo";
 import { NavButton } from "../Button";
@@ -15,7 +17,7 @@ import Arrow from "../SVGs/Arrow";
 
 const Intro = () => (
   <div className="intro">
-    <div>
+    <div className="intro__top-nav">
       <Logo color="#159B69" />
       <TopNav />
     </div>

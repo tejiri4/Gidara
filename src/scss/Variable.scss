@@ -1,10 +1,10 @@
-$midnight-express: #010C2D;
+$midnight-express: #010c2d;
 $white: #fff;
-$custom-white: #FDFDFD;
+$custom-white: #fdfdfd;
 $nobel: #999999;
-$green: #159B69;
+$green: #159b69;
 $black: #000000;
-$white-ice: #DCF9EB;
+$white-ice: #dcf9eb;
 
 // Extra small smartphones (portrait view)
 $screen-xs-max: 340px;
@@ -16,10 +16,12 @@ $screen-sm-max: 576px;
 $screen-md-max: 768px;
 
 // Tablets and small desktops
-$screen-lg-max: 1100px;
+$screen-lg-max: 900px;
 
 // Large tablets and desktops
 $screen-xl-max: 1300px;
 
 // Larger screens
 $screen-xxl-min: 166px;
+
+$big-screen-page-padding: 10%;

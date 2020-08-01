@@ -2,6 +2,8 @@ import React from "react";
 
 // styles
 import "../../scss/Footer.scss";
+
+// components
 import Logo from "../Logo";
 import Copyright from "../SVGs/Copyright";
 import Twitter from "../SVGs/Twitter";

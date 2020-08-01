@@ -7,11 +7,6 @@ import VerticalCard from "../VerticalCard";
 // styles
 import "../../scss/GroupVerticalCard.scss";
 
-// images
-import ArtistOne from "../../assets/What we do section image 1.png";
-import ArtistTwo from "../../assets/What we do section image 2.png";
-import ArtistThree from "../../assets/What we do section image 3.png";
-
 // components
 import { NavButton, PrimaryButton } from "../Button";
 import Arrow from "../SVGs/Arrow";
@@ -26,36 +21,9 @@ const GroupVerticalCard = ({
   description,
   buttonName,
   hideButton,
+  contentsRaw
 }) => {
-  const { contents, handleNavigation } = Navigate([
-    {
-      id: 1,
-      title: "One",
-      description: `Place any text you want here etc.
-      We invest between N2m - N5m in
-      marketing, production and
-      promotional fees.`,
-      src: ArtistOne,
-    },
-    {
-      id: 2,
-      title: "Two",
-      description: `Place any text you want here etc.
-      We invest between N2m - N5m in
-      marketing, production and
-      promotional fees.`,
-      src: ArtistTwo,
-    },
-    {
-      id: 3,
-      title: "Three",
-      description: `Place any text you want here etc.
-      We invest between N2m - N5m in
-      marketing, production and
-      promotional fees.`,
-      src: ArtistThree,
-    },
-  ]);
+  const { contents, handleNavigation } = Navigate(contentsRaw);
 
   return (
     <div className="group-vertical-card">

@@ -1,11 +1,13 @@
+@import "./Variable.scss";
+
 @mixin p {
   line-height: 1em;
 }
 
-@mixin flex-center-space-evenly {
+@mixin flex-center-space-center {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 // Small devices

@@ -13,6 +13,8 @@
       writing-mode: vertical-lr;
       font-size: 2em;
       font-weight: bold;
+      margin: 0;
+      padding-left: 1.5em;
     }
   }
 
@@ -29,8 +31,6 @@
 
     > div {
       text-align: justify;
-      justify-content: space-between;
-
       p {
         margin-top: 0;
       }
@@ -43,6 +43,7 @@
     &__vertical-cards {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     &__nav-buttons {
@@ -89,9 +90,11 @@
 
     &__title {
       margin: 0 3em;
-      
+
       p {
         writing-mode: inherit;
+        padding-left: 0;
+        padding-bottom: 1em;
       }
     }
   }
